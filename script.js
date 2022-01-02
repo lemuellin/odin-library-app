@@ -61,14 +61,7 @@ function displayData(){
 displayData();
 
 function changeRead(a){
-    console.log(myLibrary[a].read);
-    //myLibrary[a].read == "read"? "not read":"read";
-    if (myLibrary[a].read == 'read') {
-        myLibrary[a].read = 'not read';
-      } else {
-        myLibrary[a].read = 'read';
-      }
-    console.log(myLibrary[a].read);
+    myLibrary[a].read = (myLibrary[a].read == "read"? "not read":"read");
     displayData();
 }
 
