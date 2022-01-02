@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Library App</title>
+        <script src = "script.js" defer></script>
+        <link rel = "stylesheet" href="style.css">
+    </head>
+    <body>
+        <header class="header">Digital Bookshelf</header>
+        <section class="section1">
+            <div class="welcomeMsg">
+                <p class = "msg">Reading one book is like eating one potato chip.</p>
+                <p class = "msg">Grab a cup of coffee, sit on your rocking chair, and continue your read!</p>
+            </div>
+            <button class="log" onclick="openForm()">Log New Book</button>
+        </section>
+        <table class="table"></table>
+
+        <div class="form-popup" id="myForm">
+            <form class="form-container">
+                <h1>Log a New Book</h1>
+    
+                <label for="title"><b>Title</b></label>
+                <input type="text" placeholder="Enter Book Title" name="title" class="title" required>
+    
+                <label for="author"><b>Author</b></label>
+                <input type="text" placeholder="Enter Author" name="author" class="author" required>
+
+                <label for="page"><b>Page</b></label>
+                <input type="number" name="page" class="pages" required>
+
+                <input type="checkbox" name="read" class="read" value="not read">
+                <label for="read"><b>I have already finished this book!</b></label>
+    
+                <button type="button" class="addBook">Submit</button>
+                <button type="button" class="cancel" onclick="closeForm()">Close</button>
+            </form>
+        </div>
+
+    </body>
+</html>

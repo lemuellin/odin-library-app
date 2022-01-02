@@ -1,0 +1,214 @@
+*, *::before, *::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/*---CSS---*/
+.header{
+    height: 80px;
+    font-family: Helvetica;
+    color: white;
+    font-size: 30px;
+    background-color: brown;
+    padding: 20px 60px;
+}
+
+.section1{
+    height: 350px;
+    display: flex;
+    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    gap: 180px;
+    background: url("book.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.welcomeMsg{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.msg{
+    font-size: 25px;
+    color: lightgray;
+}
+/*#region log button*/
+.log{
+    cursor: pointer;
+    background-color: #9c6644;
+    border: 3px solid #f3d5b5;
+    width:auto;
+    height: 80px;
+    padding: 10px;
+    font-family: Helvetica;
+    font-size: 20px;
+    border-radius: 30px;
+    color: lightgray;
+}
+
+.log:hover{
+    background-color: #a27051;
+    transition: transform .15s; /* animation*/
+    transform: scale(1.04);
+}
+
+.log:active{
+    background-color: #9c6644;
+    transform: translateY(2px);
+}
+/*#endregion*/
+
+/*#region table*/
+table, th, td{
+    color: black;
+    table-layout: fixed;
+    width: 100%;
+    border: 2px solid black;
+    border-collapse: collapse;
+    font-family: Helvetica;
+}
+
+
+th{
+    background-color: #ddbea9;
+    padding: 8px;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+td{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+thead th:nth-child(1){
+    width: 200%;
+}
+
+thead th:nth-child(2){
+    width: 120%;
+}
+
+thead th:nth-child(3), thead th:nth-child(4){
+    width: 40%;
+}
+
+tbody td:nth-child(1), tbody td:nth-child(2){
+    padding-left: 35px;
+    text-align:left;
+}
+
+tbody td:nth-child(3), tbody td:nth-child(4){
+    text-align:center;
+}
+
+tbody tr:nth-child(odd){
+    background-color: #ffe8d6;
+}
+
+tbody tr:nth-child(even){
+    background-color: white;
+}
+/*#endregion*/
+
+/*#region form*/
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+.pages{
+    height: 30px;
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+/* Set a style for the submit/login button */
+.addBook, .cancel {
+  background-color: #04AA6D;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.addBook{
+    margin-top: 10px;
+}
+
+/* Add a red background color to the cancel button */
+.cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.addBook:hover, .cancel:hover{
+  opacity: 1;
+}
+/*#endregion*/
+
+.changeRead, .rmvBook{
+    font-family: helvetica;
+    font-size: 15px;
+    cursor: pointer;
+    background-color: #f08e51;
+    width:80px;
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 2px 0px 2px 0px;
+    opacity: 0.8;
+}
+
+.rmvBook{
+    cursor: pointer;
+    background-color: rgb(255, 68, 0);
+    opacity: 0.8;
+}
+
+.changeRead:hover, .rmvBook:hover{
+    opacity: 1;
+}
+
+/* Attribute */
+<a href='https://www.freepik.com/photos/background'>Background photo created by jcomp - www.freepik.com</a>
