@@ -122,12 +122,17 @@ tbody tr:nth-child(even){
 /*#region form*/
 /* The popup form - hidden by default */
 .form-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
+    display: none;
+    /* place it dead center in the window*/
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    width: 300px;
+    border: 3px solid #f1f1f1;
+    transition: transform .15s; /* animation*/
+
 }
 
 /* Add styles to the form container */
@@ -209,6 +214,3 @@ tbody tr:nth-child(even){
 .changeRead:hover, .rmvBook:hover{
     opacity: 1;
 }
-
-/* Attribute */
-<a href='https://www.freepik.com/photos/background'>Background photo created by jcomp - www.freepik.com</a>
