@@ -1,23 +1,45 @@
 let myLibrary = [];
 
+const addBook = document.querySelector('.addBook');
+addBook.addEventListener('click', ()=>addBookToLibrary());
+
+// Object Constructor
+// const book1 = new book('Digital Minimalism','Cal Newport','500','read');
+// const book2 = new book('Atomic Habits','James Clear','150','not read');
+// const book3 = new book('Rich Dad Poor Dad','Robert T.Kiyosaki','500','read');
+// myLibrary.push(book1,book2,book3);
+
+// function book(title, author, pages, read){
+//     this.title = title;
+//     this.author = author;
+//     this.pages = pages;
+//     this.read = read;
+//     this.info = function() {
+//         return(`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
+//     }
+// }
+/////
+
+//Classes
+class book{
+    constructor(title, author, pages, read){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function() {
+            return(`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
+        }
+    }
+}
+
 const book1 = new book('Digital Minimalism','Cal Newport','500','read');
 const book2 = new book('Atomic Habits','James Clear','150','not read');
 const book3 = new book('Rich Dad Poor Dad','Robert T.Kiyosaki','500','read');
 myLibrary.push(book1,book2,book3);
 
-const addBook = document.querySelector('.addBook');
-addBook.addEventListener('click', ()=>addBookToLibrary());
+/////
 
-
-function book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.info = function() {
-        return(`${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`);
-    }
-}
 
 function addBookToLibrary(){
     let title = document.querySelector('.title').value;
