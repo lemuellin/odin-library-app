@@ -18,22 +18,22 @@
         <table class="table"></table>
 
         <div class="form-popup" id="myForm">
-            <form class="form-container">
+            <form class="form-container" onsubmit="addBookToLibrary(); return false">
                 <h1>Log a New Book</h1>
     
                 <label for="title"><b>Title</b></label>
-                <input type="text" placeholder="Enter Book Title" name="title" class="title" required>
+                <input type="text" placeholder="Enter Book Title" name="title" id="title" required>
     
                 <label for="author"><b>Author</b></label>
-                <input type="text" placeholder="Enter Author" name="author" class="author" required>
+                <input type="text" placeholder="Enter Author" name="author" id="author" required>
 
                 <label for="page"><b>Page</b></label>
-                <input type="number" name="page" class="pages" required>
+                <input type="number" name="page" id="pages" required>
 
-                <input type="checkbox" name="read" class="read" value="not read">
+                <input type="checkbox" name="read" id="read" value="not read">
                 <label for="read"><b>I have already finished this book!</b></label>
     
-                <button type="button" class="addBook">Submit</button>
+                <button type="submit" class="addBook">Submit</button>
                 <button type="button" class="cancel" onclick="closeForm()">Close</button>
             </form>
         </div>

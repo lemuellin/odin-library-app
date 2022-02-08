@@ -1,7 +1,10 @@
 let myLibrary = [];
 
-const addBook = document.querySelector('.addBook');
-addBook.addEventListener('click', ()=>addBookToLibrary());
+// const addBook = document.querySelector('.addBook');
+// addBook.addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     addBookToLibrary();
+// });
 
 // Object Constructor
 // const book1 = new book('Digital Minimalism','Cal Newport','500','read');
@@ -42,11 +45,11 @@ myLibrary.push(book1,book2,book3);
 
 
 function addBookToLibrary(){
-    let title = document.querySelector('.title').value;
-    let author = document.querySelector('.author').value;
-    let pages = document.querySelector('.pages').value;
-    let read = document.querySelector('.read').value;
-    console.log(read);
+    let title = document.getElementById('title').value;
+    let author = document.getElementById('author').value;
+    let pages = document.getElementById('pages').value;
+    let read = document.getElementById('read').value;
+    console.log(typeof title);
     
     let bookNew = new book(title, author, pages, read);
     myLibrary.push(bookNew);
